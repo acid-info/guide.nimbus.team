@@ -7,8 +7,8 @@ const downloadRemoteContent =
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Waku',
-  url: 'https://guide.waku.org/',
+  title: 'Nimbus',
+  url: 'https://guide.nimbus.team/',
   baseUrl: '/',
 
   markdown: {
@@ -28,7 +28,7 @@ const config = {
       '@acid-info/logos-docusaurus-preset',
       /** @type {import('@acid-info/logos-docusaurus-preset').PluginOptions} */
       ({
-        businessUnit: 'Waku',
+        businessUnit: 'Nimbus',
         customSiteConfig: true,
         theme: {
           name: 'default',
@@ -56,9 +56,7 @@ const config = {
       '@docusaurus/plugin-ideal-image',
       {
         quality: 100,
-        max: 1080,
-        min: 400,
-        steps: 2,
+        sizes: [400],
         disableInDev: true,
       },
     ],
@@ -102,24 +100,24 @@ const config = {
         ],
       },
       footer: {
-        copyright: 'Waku @2023<br/>All Rights Reserved.',
+        copyright: 'Nimbus @2023<br/>All Rights Reserved.',
         links: [
           {
             items: [
               {
-                href: 'https://twitter.com/waku_org',
+                href: 'https://twitter.com/ethnimbus',
                 label: 'Twitter',
               },
               {
-                href: 'https://discord.waku.org/',
+                href: 'https://discord.gg/EP8DZnXu9y',
                 label: 'Discord',
               },
               {
-                href: 'https://docs.waku.org',
+                to: '/docs',
                 label: 'Docs',
               },
               {
-                href: 'https://github.com/waku-org',
+                href: 'https://github.com/status-im',
                 label: 'Github',
               },
             ],
