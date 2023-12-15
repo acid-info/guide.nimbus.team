@@ -2,14 +2,13 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 require('dotenv').config()
 
-const downloadRemoteContent =
-  process.env.SKIP_DOWNLOAD !== '1' && process.env.NODE_ENV !== 'production'
-
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Nimbus',
   url: 'https://guide.nimbus.team/',
   baseUrl: '/',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
 
   markdown: {
     mermaid: true,
@@ -60,7 +59,7 @@ const config = {
         disableInDev: true,
       },
     ],
-    (downloadRemoteContent && [
+    [
       '@acid-info/docusaurus-remote-content',
       /** @type {import('@acid-info/docusaurus-remote-content').PluginOptions} */
       ({
@@ -73,9 +72,9 @@ const config = {
         outDir: 'docs',
         sourceDir: 'docs',
         keepLocal: ['./visual-language/logo.mdx'],
-        keepStatic: ['waku/**/*'],
+        keepStatic: ['nimbus/**/*'],
       }),
-    ]),
+    ],
   ],
 
   themes: [
