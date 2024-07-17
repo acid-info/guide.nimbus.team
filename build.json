@@ -1,0 +1,15 @@
+{
+    "timestamp": "2024-07-17T14:04:11Z",
+    "git": {
+        "commit": "98bd1d4eb53faf73b6be4f4577836f3bc96fcc6e",
+        "branch": "origin/master",
+        "url": "git@github.com:acid-info/guide.nimbus.team.git"
+    },
+    "build": {
+        "id": "21",
+        "number": "21",
+        "name": "website/guide.nimbus.team",
+        "slave": "linux-02",
+        "url": "https://ci.infra.status.im/job/website/job/guide.nimbus.team/21/"
+    }
+}
