@@ -1,15 +1,15 @@
 {
-    "timestamp": "2024-07-17T13:58:23Z",
+    "timestamp": "2024-08-20T12:29:38Z",
     "git": {
-        "commit": "d77ff271b92310b7fe94d5c5c6f9844c3e9b5feb",
-        "branch": "origin/deploy-via-caddy-git",
+        "commit": "ce5689d6d86e472ef92ca47a0ba067e227a94c23",
+        "branch": "origin/nix-build",
         "url": "git@github.com:acid-info/guide.nimbus.team.git"
     },
     "build": {
-        "id": "14",
-        "number": "14",
+        "id": "15",
+        "number": "15",
         "name": "website/dev-guide.nimbus.team",
         "slave": "linux-02",
-        "url": "https://ci.infra.status.im/job/website/job/dev-guide.nimbus.team/14/"
+        "url": "https://ci.infra.status.im/job/website/job/dev-guide.nimbus.team/15/"
     }
 }
