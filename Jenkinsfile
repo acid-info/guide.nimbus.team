@@ -21,16 +21,18 @@ pipeline {
 
   stages {
     stage('Install') {
-      steps {
-        sh 'yarn install'
+      steps { 
+        script {
+          nix.develop('yarn install')
+        }
       }
     }
 
     stage('Build') {
       steps {
         script {
-          sh 'yarn build'
-          jenkins.genBuildMetaJSON('build/build.json')
+          nix.develop('yarn build')
+          jenkins.genBuildMetaJSON('dist/build.json')
         }
       }
     }
@@ -38,13 +40,16 @@ pipeline {
     stage('Publish') {
       steps {
         sshagent(credentials: ['status-im-auto-ssh']) {
-          sh """
-            ghp-import \
-              -b ${deployBranch()} \
-              -c ${deployDomain()} \
-              -p build
-          """
-         }
+          script {
+            nix.develop("""
+              ghp-import \
+                -b ${deployBranch()} \
+                -c ${deployDomain()} \
+                -p dist
+              """
+            )
+          }
+        }
       }
     }
   }
