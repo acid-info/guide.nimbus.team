@@ -32,7 +32,7 @@ pipeline {
       steps {
         script {
           nix.develop('yarn build')
-          jenkins.genBuildMetaJSON('dist/build.json')
+          jenkins.genBuildMetaJSON('build/build.json')
         }
       }
     }
@@ -45,7 +45,7 @@ pipeline {
               ghp-import \
                 -b ${deployBranch()} \
                 -c ${deployDomain()} \
-                -p dist
+                -p build
               """
             )
           }
