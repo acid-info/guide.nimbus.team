@@ -1,15 +1,15 @@
 {
-    "timestamp": "2024-12-13T19:24:47Z",
+    "timestamp": "2024-12-13T19:40:04Z",
     "git": {
         "commit": "98bd1d4eb53faf73b6be4f4577836f3bc96fcc6e",
         "branch": "origin/master",
         "url": "git@github.com:acid-info/guide.nimbus.team.git"
     },
     "build": {
-        "id": "41",
-        "number": "41",
+        "id": "42",
+        "number": "42",
         "name": "website/dashboard.logos.co",
         "slave": "linux-02",
-        "url": "https://ci.infra.status.im/job/website/job/dashboard.logos.co/41/"
+        "url": "https://ci.infra.status.im/job/website/job/dashboard.logos.co/42/"
     }
 }
